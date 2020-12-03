@@ -5,7 +5,7 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 const constraint = Matter.Constraint
 var ground1;
-var ball1,rope1,ball2,ball3,ball4,ball5,rope2,rope3,rope4,rope5;
+var ball1,rope1,ball2,ball3,ball4,ball5,rope2,rope3,rope4,rope5,ground2;
 function preload()
 {
 	
@@ -30,7 +30,7 @@ function setup() {
   ball4 = new bob(800,600,50);
   rope4 = new Rope(ball4.body,{x: 800,y:200});
 	Engine.run(engine);
-  
+  ground2 = new ground(650,200,50,300);
 }
 
 
@@ -48,6 +48,8 @@ function draw() {
   ball4.display();
   rope3.display();
   rope4.display();
+  ground2.display();
+	
   //drawSprites();
  
 }
